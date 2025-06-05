@@ -1,10 +1,11 @@
 class Animal():
     def __init__(self,name,speices):
-        self.name = name
+        self._name = name
         self.speices = speices
 
     def speak(slef):
         return "Some sound"
+    
     
 class Dog(Animal):
     def __init__(self, name, speices):
@@ -31,7 +32,3 @@ if __name__ == "__main__":
 
     zoo.make_all_speak()
 
-
-        
-    
-        
