@@ -168,7 +168,13 @@ class BinaryTree():
                     queue.append(node.right)
             print(temp_sum)
             max_sum = max(max_sum,temp_sum)   
-        return max_sum       
+        return max_sum     
+
+    def subtree(self):
+        root = self.root
+
+        
+
         
 
 
