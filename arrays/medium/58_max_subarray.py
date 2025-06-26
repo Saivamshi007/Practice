@@ -1,24 +1,16 @@
 from typing import List
 class Solution:
     def max_sub_array(self,nums:List[int])->int:
-        max_sum = float('-inf')
-        i,j = 0,len(nums)
-        max_sum = float("-inf")
-
-
-        while i<j:
-            sub = sum(nums[i:j])
+        max_sum = sub = nums[0]
+        for i in range(1,len(nums)):
+            sub = max(nums[i],sub+nums[i])
             max_sum = max(max_sum,sub)
-            if max_sum>sub:
-                i+=1
-            else:
-                j-=1
 
 
                 
         return max_sum 
     
 if __name__ == "__main__":
-    nums = [5,4,-1,7,8]
+    nums = [-2,-1]
     sol = Solution()
     print(sol.max_sub_array(nums))
